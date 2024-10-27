@@ -37,7 +37,7 @@ mview = "0.1.0"
 Run the following command to unpack a Marmoset Viewer archive:
 
 ```sh
-mview <archive.mview>
+mview-extract <archive.mview> [output_directory]
 ```
 
 ## Contributing

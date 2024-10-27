@@ -12,7 +12,7 @@ readme      = "README.md"
 repository  = "https://github.com/HeavenVolkoff/mview-rs"
 
 [[bin]]
-name = "mview"
+name = "mview-extract"
 path = "src/main.rs"
 
 [dependencies]
