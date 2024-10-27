@@ -1,15 +1,19 @@
 [package]
-name = "mview"
+name    = "mview"
 version = "0.1.0"
 
-authors = ["Vítor Vasconcellos <vasconcellos.dev@gmail.com>"]
-edition = "2021"
-description = "Unpacker for .MView files"
-keywords   = ["mview", "3d", "unpacker", "decompressor"]
-license    = "MIT"
-repository = "https://github.com/HeavenVolkoff/mview-rs"
-readme = "README.md"
-categories = ["rendering::data-formats", "parsing"]
+authors     = ["Vítor Vasconcellos <vasconcellos.dev@gmail.com>"]
+categories  = ["parsing", "rendering::data-formats"]
+description = "A tool for unpacking Marmoset Viewer archive packages, enabling the extraction and decompression of 3D models and scenes."
+edition     = "2021"
+keywords    = ["3d", "decompressor", "mview", "unpacker"]
+license     = "MIT"
+readme      = "README.md"
+repository  = "https://github.com/HeavenVolkoff/mview-rs"
+
+[[bin]]
+name = "mview"
+path = "src/main.rs"
 
 [dependencies]
 
