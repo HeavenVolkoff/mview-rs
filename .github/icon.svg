@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <path fill="#1a2733" d="M28 33h45l5 5v35H33l-5-5Z" opacity=".5" />
-    <path fill="#2C3E50" stroke="#ECF0F1" stroke-width="2"
+    <path fill="#1a1a1a" d="M28 33h45l5 5v35H33l-5-5Z" opacity=".5" />
+    <path fill="#2b2b2b" stroke="#DEE4E7" stroke-width="2"
         d="M25 30c0-3 2-5 5-5h40c3 0 5 2 5 5v35c0 3-2 5-5 5H30c-3 0-5-2-5-5Z" />
-    <path stroke="#405D78" stroke-dasharray="2 2" stroke-width="1.5" d="M50 25v45" />
-    <path fill="none" stroke="#ECF0F1" stroke-width="2" d="M25 30q25 15 50 0" />
-    <text x="35" y="52" fill="#ECF0F1" font-family="Arial" font-size="22" font-weight="bold">.MV</text>
+    <path fill="none" stroke="#FF4B00" stroke-width="1.5" d="M50 25v45" />
+    <path fill="none" stroke="#DEE4E7" stroke-width="2" d="M25 30q25 15 50 0" />
+    <path fill="#FF4B00"
+        d="M50 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm8.5 2.2a3 3 0 1 1 5.2-3 3 3 0 0 1-5.2 3zm-17 0a3 3 0 1 1-5.2-3 3 3 0 0 1 5.2 3z"
+        opacity=".9" />
+    <text x="35" y="52" fill="#DEE4E7" font-family="Arial" font-size="22" font-weight="bold">.MV</text>
+    <text x="78" y="65" fill="#FF4B00" font-family="Arial" font-size="14" font-weight="bold">rs</text>
 </svg>
