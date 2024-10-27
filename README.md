@@ -22,7 +22,6 @@ Or clone the repository and build it manually:
 git clone https://github.com/HeavenVolkoff/mview-rs
 cd mview-rs
 cargo build --release
-./target/release/mview-cli <archive.mview>
 ```
 
 To use the **mview** library, add it to your `Cargo.toml`:
