@@ -1,5 +1,7 @@
-use std::any::Any;
-use std::io::{self, BufReader, Read};
+use std::{
+    any::Any,
+    io::{self, BufReader, Read},
+};
 
 use crate::mview_entry::MViewEntry;
 

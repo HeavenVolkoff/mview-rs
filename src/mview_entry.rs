@@ -1,5 +1,4 @@
-use std::cmp::Ordering;
-use std::io;
+use std::{cmp::Ordering, io};
 
 use crate::utils::{next_or_eof, read_cstr, read_u32};
 
@@ -90,7 +89,7 @@ impl MViewEntry {
                     }
                 }
                 Ordering::Equal => {
-                    // Special case: repeat previous sequence + its first byte
+                    // Special case: repeat previous sequence data + its first byte
                     let start = index;
 
                     let (left, right) = decompressed.split_at_mut(start);
