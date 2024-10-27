@@ -1,6 +1,6 @@
 <p align="center">
     <p align="center">
-        <img width="150" height="150" src=".github/icon.svg" alt="Project logo">
+        <img width="300" height="300" src=".github/icon.svg" alt="Project logo">
     </p>
     <h1 align="center"><b>mview-rs</b></h1>
     <p align="center">
