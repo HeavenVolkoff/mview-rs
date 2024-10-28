@@ -19,7 +19,7 @@ path = "src/main.rs"
 
 [dependencies]
 clap  = { version = "4.5", features = ["derive"] }
-mview = { path = ".." }
+mview = { version = "0.1.0", path = ".." }
 
 [lints]
 workspace = true
