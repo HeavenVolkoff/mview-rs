@@ -8,20 +8,16 @@
     </p>
 </p>
 
+### mview-extract
+
+Check [here](./cli) for the extraction tool's instruction.
+
 ## Installation
 
 Via Cargo:
 
 ```sh
-cargo install mview-cli
-```
-
-Or clone the repository and build it manually:
-
-```sh
-git clone https://github.com/HeavenVolkoff/mview-rs
-cd mview-rs
-cargo build --release
+cargo install mview
 ```
 
 To use the **mview** library, add it to your `Cargo.toml`:
@@ -29,14 +25,6 @@ To use the **mview** library, add it to your `Cargo.toml`:
 ```toml
 [dependencies]
 mview = "0.1.0"
-```
-
-## Usage
-
-Run the following command to unpack a Marmoset Viewer archive:
-
-```sh
-mview-extract <archive.mview> [output_directory]
 ```
 
 ## Contributing

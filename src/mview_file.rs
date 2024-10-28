@@ -7,16 +7,32 @@ use crate::mview_entry::MViewEntry;
 
 const BUFFERED_CAPACITY: usize = 128 * 1024; // 128 KiB
 
+#[derive(Debug)]
 enum InnerReader<R: Read> {
     Direct(R),              // Already buffered by caller
     Buffered(BufReader<R>), // Explicitly buffered by us
 }
 
+/// An iterator over the entries in an .mview file.
+///
+/// This struct is created by the [`MViewFile::new`] method.
+#[derive(Debug)]
 pub struct MViewFile<R: Read> {
     inner: InnerReader<R>,
 }
 
 impl<R: Read + Any> MViewFile<R> {
+    /// Creates a new `MViewFile` from the given reader.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// use std::fs::File;
+    /// use mview::MViewFile;
+    ///
+    /// let file = File::open("example.mview").unwrap();
+    /// let mview = MViewFile::new(file);
+    /// ```
     pub fn new(reader: R) -> Self {
         // Check if the reader is already a BufReader
         let inner = if (&reader as &dyn Any)

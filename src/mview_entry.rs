@@ -20,6 +20,7 @@ impl Default for Sequence {
     }
 }
 
+/// Represents an entry in an .mview file.
 #[derive(Debug)]
 pub struct MViewEntry {
     pub name: String,

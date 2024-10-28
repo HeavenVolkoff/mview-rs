@@ -1,21 +1,28 @@
+[workspace]
+members = [".", "cli"]
+
 [package]
 name    = "mview"
 version = "0.1.0"
 
 authors     = ["Vítor Vasconcellos <vasconcellos.dev@gmail.com>"]
 categories  = ["parsing", "rendering::data-formats"]
-description = "A tool for unpacking Marmoset Viewer archive packages, enabling the extraction and decompression of 3D models and scenes."
-edition     = "2021"
-keywords    = ["3d", "decompressor", "mview", "unpacker"]
-license     = "MIT"
-readme      = "README.md"
-repository  = "https://github.com/HeavenVolkoff/mview-rs"
+description = "Library for parsing Marmoset Viewer archive packages"
+homepage    = "https://github.com/HeavenVolkoff/mview-rs"
+include     = ["/Cargo.toml", "/LICENSE", "/README.md", "/src/**"]
 
-[[bin]]
-name = "mview-extract"
-path = "src/main.rs"
+edition.workspace    = true
+keywords.workspace   = true
+license.workspace    = true
+readme.workspace     = true
+repository.workspace = true
 
-[dependencies]
+[workspace.package]
+edition    = "2021"
+keywords   = ["3d", "decompress", "mview", "unpacker"]
+license    = "MIT"
+readme     = "README.md"
+repository = "https://github.com/HeavenVolkoff/mview-rs"
 
 [profile.dev]
 opt-level = 1
@@ -29,7 +36,19 @@ strip       = "symbols"
 [profile.bench]
 incremental = true
 
-[lints.clippy]
+[workspace.lints.rust]
+# Warns
+deprecated            = "warn"
+rust_2018_idioms      = { priority = -1, level = "warn" }
+trivial_casts         = "warn"
+trivial_numeric_casts = "warn"
+unused_allocation     = "warn"
+unused_qualifications = "warn"
+# Forbids
+deprecated_in_future = "forbid"
+unsafe_code          = "forbid"
+
+[workspace.lints.clippy]
 cargo       = { priority = -1, level = "deny" }
 complexity  = { priority = -1, level = "deny" }
 correctness = { priority = -1, level = "deny" }

@@ -1,0 +1,25 @@
+[package]
+name    = "mview-extract"
+version = "0.1.0"
+
+authors     = ["Vítor Vasconcellos <vasconcellos.dev@gmail.com>"]
+categories  = ["command-line-utilities", "parsing", "rendering::data-formats"]
+description = "A tool for unpacking Marmoset Viewer archive packages, enabling the extraction and decompression of 3D models and scenes."
+homepage    = "https://github.com/HeavenVolkoff/mview-rs/tree/main/cli"
+
+edition.workspace    = true
+keywords.workspace   = true
+license.workspace    = true
+readme.workspace     = true
+repository.workspace = true
+
+[[bin]]
+name = "mview-extract"
+path = "src/main.rs"
+
+[dependencies]
+clap  = { version = "4.5", features = ["derive"] }
+mview = { path = ".." }
+
+[lints]
+workspace = true
