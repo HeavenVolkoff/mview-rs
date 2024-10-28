@@ -14,12 +14,6 @@ Check [here](./cli) for the extraction tool's instruction.
 
 ## Installation
 
-Via Cargo:
-
-```sh
-cargo install mview
-```
-
 To use the **mview** library, add it to your `Cargo.toml`:
 
 ```toml
