@@ -1,3 +1,5 @@
+//! mview is a library for library for parsing Marmoset Viewer archive packages
+
 mod mview_entry;
 mod mview_file;
 mod utils;

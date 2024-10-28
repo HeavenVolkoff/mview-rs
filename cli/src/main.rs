@@ -1,3 +1,5 @@
+//! mview-extract is a command-line utility for extracting the contents of Marmoset Viewer archive packages.
+
 use std::{io, path::PathBuf};
 
 use clap::{command, ArgAction, Parser};
