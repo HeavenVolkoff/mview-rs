@@ -6,11 +6,11 @@ authors     = ["Vítor Vasconcellos <vasconcellos.dev@gmail.com>"]
 categories  = ["command-line-utilities", "parsing", "rendering::data-formats"]
 description = "A tool for unpacking Marmoset Viewer archive packages, enabling the extraction and decompression of 3D models and scenes."
 homepage    = "https://github.com/HeavenVolkoff/mview-rs/tree/main/cli"
+readme      = "README.md"
 
 edition.workspace    = true
 keywords.workspace   = true
 license.workspace    = true
-readme.workspace     = true
 repository.workspace = true
 
 [[bin]]
