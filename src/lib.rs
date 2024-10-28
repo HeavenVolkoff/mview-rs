@@ -1,3 +1,5 @@
+//! [![](https://github.com/HeavenVolkoff/mview-rs/blob/main/.github/icon.svg)](https://github.com/HeavenVolkoff/mview-rs)
+//!
 //! mview is a library for library for parsing Marmoset Viewer archive packages
 
 mod mview_entry;

@@ -1,3 +1,5 @@
+//! [![](https://github.com/HeavenVolkoff/mview-rs/blob/main/.github/icon.svg)](https://github.com/HeavenVolkoff/mview-rs)
+//!
 //! mview-extract is a command-line utility for extracting the contents of Marmoset Viewer archive packages.
 
 use std::{io, path::PathBuf};

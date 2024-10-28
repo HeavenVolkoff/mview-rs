@@ -13,9 +13,9 @@ enum InnerReader<R: Read> {
     Buffered(BufReader<R>), // Explicitly buffered by us
 }
 
-/// An iterator over the entries in an .mview file.
+/// Represents an .mview file.
 ///
-/// This struct is created by the [`MViewFile::new`] method.
+/// Provides an iterator over all decoded entries in it.
 #[derive(Debug)]
 pub struct MViewFile<R: Read> {
     inner: InnerReader<R>,
@@ -51,6 +51,24 @@ impl<R: Read + Any> MViewFile<R> {
 impl<R: Read> Iterator for MViewFile<R> {
     type Item = io::Result<MViewEntry>;
 
+    /// Returns the next entry in the .mview file.
+    ///
+    /// # Examples
+    ///
+    /// ```rust
+    /// use std::fs::File;
+    /// use mview::MViewFile;
+    ///
+    /// let file = File::open("example.mview").unwrap();
+    /// let mview = MViewFile::new(file);
+    ///
+    /// for entry in mview {
+    ///    match entry {
+    ///      Ok(entry) => println!("Name: {entry.name}, Type: {entry.mime_type)}")
+    ///      Err(e) => eprintln!("Error: {}", e),
+    ///   }
+    /// }
+    /// ```
     fn next(&mut self) -> Option<Self::Item> {
         let reader: &mut dyn Read = match &mut self.inner {
             InnerReader::Direct(reader) => reader,
